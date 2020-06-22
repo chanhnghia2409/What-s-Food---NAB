@@ -5,6 +5,10 @@ import 'package:what_food/Screens/Welcome/welcome_screen.dart';
 
 void main() => runApp(MyApp());
 
+
+
+
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
