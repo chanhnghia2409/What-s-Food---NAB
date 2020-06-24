@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:what_food/Screens/Login/components/background.dart';
 import 'package:what_food/Screens/Profile/profile_screen.dart';
 import 'package:what_food/Screens/Signup/signup_screen.dart';
-import 'package:what_food/Screens/TestScreens.dart';
 import 'package:what_food/Services/AuthService.dart';
 import 'package:what_food/components/already_have_an_account_acheck.dart';
 import 'package:what_food/components/rounded_button.dart';

@@ -41,28 +41,9 @@ class AuthService {
   }
 }
 
-  static Future <String> profile_Author() async {
+  static Future <User> getUserWithId(idUser) async {
 
     final prefs = await SharedPreferences.getInstance();
-    final key = 'token';
-    final value = prefs.get(key ) ?? 0;
-
-    String apiUrl = '$URL_PROFILE';
-    http.Response response = await http.get(apiUrl, headers: {'Authorization' : 'Bearer $value'});
-    if (response.statusCode == 200) {
-        print("Result: ${response.body}");
-        print('Lấy Profile Về Thành Công');
-        return json.decode(response.body);
-    } else {
-        print('Lấy Profile Về Thất Bại');
-    }
-  }
-
-  static Future <User> getUserWithId() async {
-
-    final prefs = await SharedPreferences.getInstance();
-    final keyId = 'id';
-    final idUser = prefs.get(keyId) ?? 0;
     final keyToken = 'token';
     final token = prefs.get(keyToken) ?? 0;
 
@@ -71,11 +52,11 @@ class AuthService {
     if (response.statusCode == 200) {
         print("Result: ${response.body}");
         print('Lấy User Về Thành Công');
-        return json.decode(response.body);
+        User userFromJson = json.decode(response.body);
+        return userFromJson;
     } else {
         print('Lấy User Về Thất Bại');
     }
-  
   }
 
   static Future <User> upDateProfileUser(name,password,email,bio,avatar) async {
