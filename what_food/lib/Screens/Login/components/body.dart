@@ -8,26 +8,24 @@ import 'package:what_food/components/already_have_an_account_acheck.dart';
 import 'package:what_food/components/rounded_button.dart';
 import 'package:what_food/components/rounded_input_field.dart';
 import 'package:what_food/components/rounded_password_field.dart';
+import 'package:what_food/test123.dart';
 
 class Body extends StatelessWidget {
-
   String _phone, _password;
-
 
   @override
   Widget build(BuildContext context) {
-
-  _submit () {
-    AuthService.login_Author(_phone,_password);
-    Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return MyHomePage();
-                    },
-                  ),
-                );
-  }
+    _submit() {
+      AuthService.login_Author(_phone, _password);
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return TestApp();
+          },
+        ),
+      );
+    }
 
     Size size = MediaQuery.of(context).size;
     return Background(
