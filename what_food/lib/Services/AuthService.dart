@@ -27,8 +27,8 @@ class AuthService {
   static Future<String> login_Author(phone, password) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     String apiUrl = '$URL_LOGIN';
-    var jsonResponseToken = null;
-    var jsonResponseId = null;
+    var jsonResponseToken;
+    var jsonResponseId;
     http.Response response =
         await http.post(apiUrl, body: {'phone': phone, 'password': password});
     if (response.statusCode == 200) {
@@ -59,6 +59,7 @@ class AuthService {
       return User.fromJson(json.decode(response.body));
     } else {
       print('Lấy Profile Về Thất Bại');
+      return null;
     }
   }
 
@@ -102,6 +103,7 @@ class AuthService {
       return json.decode(response.body);
     } else {
       print('Up Date Thất Bại');
+      return null;
     }
   }
 

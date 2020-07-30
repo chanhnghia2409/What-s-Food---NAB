@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:what_food/Screens/Login/components/background.dart';
-import 'package:what_food/Screens/Profile/profile_screen.dart';
+
 import 'package:what_food/Screens/Signup/signup_screen.dart';
 import 'package:what_food/Services/AuthService.dart';
 import 'package:what_food/components/already_have_an_account_acheck.dart';
@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return TestApp();
+            return ProfileScreen();
           },
         ),
       );

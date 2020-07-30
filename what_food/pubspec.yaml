@@ -31,6 +31,10 @@ dependencies:
   http: any
   shared_preferences: any
   flutter_svg: any
+  provider: any
+  image_picker: any
+  cached_network_image: any
+  animator: any
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +59,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/Avatar_default.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

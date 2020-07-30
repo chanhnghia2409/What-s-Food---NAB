@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:what_food/Screens/Login/login_screen.dart';
-import 'package:what_food/Screens/Profile/profile_screen.dart';
+
 import 'package:what_food/Screens/Welcome/welcome_screen.dart';
-import 'package:what_food/test123.dart';
 
 void main() => runApp(MyApp());
 
