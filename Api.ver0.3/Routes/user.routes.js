@@ -30,7 +30,6 @@ router.put('/user/me/update', RequireLogin, (req, res) => {
             $set: 
             { 
             name: req.body.name,
-            email: req.body.email,
             avatar: req.body.avatar,
             bio: req.body.bio
             } 
